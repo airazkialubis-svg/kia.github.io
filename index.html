@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>My Portfolio | Aira Zakia</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       ROOT
+    ========================= */
+    :root {
+      --pink: #ff6fae;
+      --pink-dark: #ec407a;
+      --purple: #b565d9;
+      --blue: #69c9ff;
+      --light-pink: #fff0f6;
+      --light-blue: #eefaff;
+      --text-dark: #37474f;
+      --white: #ffffff;
+    }
+
+
+    /* =========================
+       GLOBAL
+    ========================= */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+      background: #fff8fb;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--pink);
+      color: white;
+    }
+
+
+    /* =========================
+       SCROLLBAR
+    ========================= */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #fff0f6;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(
+        var(--pink),
+        var(--purple)
+      );
+      border-radius: 20px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+    .navbar {
+      background: rgba(255, 255, 255, 0.75) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 5px 25px rgba(255, 111, 174, 0.12);
+      transition: 0.3s;
+    }
+
+    .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.4rem;
+      background: linear-gradient(
+        45deg,
+        var(--pink),
+        var(--purple)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link {
+      color: #555 !important;
+      font-weight: 600;
+      margin-left: 8px;
+      padding: 8px 15px !important;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: white !important;
+      background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+      );
+      box-shadow: 0 5px 15px rgba(255, 111, 174, 0.3);
+    }
+
+    .navbar-toggler {
+      border: none;
+      box-shadow: none !important;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+    #home {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255,255,255,0.8),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #b9e9ff 0%,
+          #ffd0e2 50%,
+          #e7d2ff 100%
+        );
+
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+    }
+
+
+    /* Background blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(5px);
+      opacity: 0.5;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .blob-one {
+      width: 180px;
+      height: 180px;
+      background: #ff9ec5;
+      top: 15%;
+      left: -50px;
+    }
+
+    .blob-two {
+      width: 220px;
+      height: 220px;
+      background: #8ddcff;
+      bottom: -80px;
+      right: -50px;
+      animation-delay: 2s;
+    }
+
+    .blob-three {
+      width: 100px;
+      height: 100px;
+      background: #d69cff;
+      top: 20%;
+      right: 15%;
+      animation-delay: 1s;
+    }
+
+
+    /* Hero content */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1s ease;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 7px solid rgba(255,255,255,0.9);
+      box-shadow:
+        0 15px 40px rgba(171,71,188,0.25);
+      transition: 0.5s;
+      animation: profileFloat 4s ease-in-out infinite;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .hero-title {
+      font-weight: 800;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      background: linear-gradient(
+        45deg,
+        #ec407a,
+        #ab47bc,
+        #29b6f6
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 15px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #5f6368;
+    }
+
+    .badge-custom {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 50px;
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(10px);
+      color: #ec407a;
+      font-weight: 600;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+    .btn-pink {
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+      );
+      box-shadow: 0 8px 25px rgba(255, 64, 129, 0.3);
+      transition: 0.3s;
+    }
+
+    .btn-pink:hover {
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(255, 64, 129, 0.45);
+    }
+
+    .btn-outline-pink {
+      border: 2px solid var(--pink);
+      color: var(--pink);
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .btn-outline-pink:hover {
+      background: var(--pink);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       SECTION
+    ========================= */
+    section {
+      position: relative;
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-weight: 800;
+      font-size: 2.2rem;
+      background: linear-gradient(
+        45deg,
+        var(--pink),
+        var(--purple)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-line {
+      width: 70px;
+      height: 5px;
+      border-radius: 10px;
+      margin: 12px auto 35px;
+      background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--purple),
+        var(--blue)
+      );
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+    #about {
+      background: white;
+    }
+
+    .about-box {
+      background: linear-gradient(
+        135deg,
+        #fff,
+        #fff3f8
+      );
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(255, 111, 174, 0.1);
+      transition: 0.4s;
+    }
+
+    .about-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(255, 111, 174, 0.18);
+    }
+
+    .about-icon {
+      width: 65px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.7rem;
+      background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+      );
+    }
+
+
+    /* =========================
+       KARYA
+    ========================= */
+    #karya {
+      background:
+        linear-gradient(
+          180deg,
+          #fff8fb,
+          #effaff
+        );
+    }
+
+    .hobby-card {
+      position: relative;
+      border: none;
+      border-radius: 25px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: 0.4s;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(255, 111, 174, 0.2);
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .hobby-card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        rgba(255,111,174,0.1),
+        rgba(171,71,188,0.4)
+      );
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .hobby-card:hover .image-overlay {
+      opacity: 1;
+    }
+
+    .image-overlay i {
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: #444;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+    #contact {
+      background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #e9faff
+      );
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .form-control {
+      border: 2px solid #f7d5e3;
+      border-radius: 15px;
+      padding: 13px 16px;
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 15px rgba(255,111,174,0.15);
+    }
+
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================= */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+      );
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px) rotate(5deg);
+      box-shadow: 0 8px 20px rgba(255,111,174,0.3);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      background: linear-gradient(
+        135deg,
+        #81d4fa,
+        #f48fb1
+      );
+      color: white;
+      padding: 25px;
+    }
+
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+      );
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px);
+    }
+
+
+    /* =========================
+       ANIMATION
+    ========================= */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-25px);
+      }
+    }
+
+    @keyframes profileFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+    @media (max-width: 768px) {
+
+      #home {
+        min-height: 600px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .about-box,
+      .contact-box {
+        padding: 25px;
+      }
+
+      .nav-link {
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand" href="#home">
+        Aira Zakia 🎀
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              <i class="bi bi-house-heart-fill"></i>
+              Beranda
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="bi bi-person-heart"></i>
+              Tentang
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#karya">
+              <i class="bi bi-stars"></i>
+              Karya
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              <i class="bi bi-envelope-heart"></i>
+              Kontak
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO / BERANDA ================= -->
+  <section id="home">
+
+    <!-- Decorative blobs -->
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+
+    <div class="container text-center hero-content">
+
+      <span class="badge-custom">
+        ✨ Welcome to My Portfolio ✨
+      </span>
+
+      <br>
+
+      <img
+        src="img/kia.jpeg"
+        alt="Foto Aira Zakia"
+        class="rounded-circle profile-img mb-3"
+      />
+
+      <h1 class="hero-title">
+        Aira Zakia
+      </h1>
+
+      <p class="hero-subtitle fw-semibold">
+        C-Drama Lover 🌸 | Walk & Eat 🍡
+      </p>
+
+      <p class="text-secondary">
+        Welcome to my little world 💕
+      </p>
+
+      <div class="mt-4">
+
+        <a href="#about" class="btn btn-pink me-2">
+          Tentang Saya
+          <i class="bi bi-arrow-down"></i>
+        </a>
+
+        <a href="#karya" class="btn btn-outline-pink">
+          Lihat Karya
+          <i class="bi bi-stars"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= TENTANG ================= -->
+  <section id="about">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <h2 class="section-title">
+          Tentang Saya 🩰
+        </h2>
+
+        <div class="section-line"></div>
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+          <div class="about-box text-center">
+
+            <div class="about-icon">
+              <i class="bi bi-person-heart"></i>
+            </div>
+
+            <h4 class="fw-bold mb-3">
+              Hai, aku Aira! 💗
+            </h4>
+
+            <p class="text-muted mb-0">
+              Hai! Perkenalkan, nama saya
+              <strong>Aira Zakia Lubis</strong>.
+              Saya adalah seorang pelajar di
+              <strong>SMK Swasta Mandiri</strong>.
+              Saya adalah pribadi yang kreatif, ramah,
+              dan antusias untuk mencoba hal-hal baru.
+              Saya juga suka menonton drama China,
+              kulineran, dan jalan-jalan bersama orang-orang
+              terdekat. 🌷✨
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Mini information -->
+      <div class="row text-center mt-4 g-3">
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white shadow-sm">
+            <i class="bi bi-heart-fill text-danger fs-2"></i>
+            <h6 class="fw-bold mt-2">
+              Creative
+            </h6>
+            <small class="text-muted">
+              Suka membuat sesuatu yang menarik
+            </small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white shadow-sm">
+            <i class="bi bi-camera-fill text-primary fs-2"></i>
+            <h6 class="fw-bold mt-2">
+              Explorer
+            </h6>
+            <small class="text-muted">
+              Suka mengeksplor tempat baru
+            </small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white shadow-sm">
+            <i class="bi bi-stars text-warning fs-2"></i>
+            <h6 class="fw-bold mt-2">
+              Cheerful
+            </h6>
+            <small class="text-muted">
+              Senang mencoba pengalaman baru
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= KARYA ================= -->
+  <section id="karya">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <h2 class="section-title">
+          Karya & Hobiku 🌷
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="text-muted">
+          Beberapa hal yang aku sukai dalam keseharianku 💕
+        </p>
+
+      </div>
+
+
+      <div class="row g-4 justify-content-center">
+
+
+        <!-- CARD 1 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="hobby-card h-100">
+
+            <div class="card-img-wrapper">
+
+              <img
+                src="img/dc.jpeg"
+                class="card-img-top"
+                alt="IQIYI"
+              />
+
+              <div class="image-overlay">
+                <i class="bi bi-play-circle-fill"></i>
+              </div>
+
+            </div>
+
+            <div class="card-body text-center">
+
+              <h5 class="card-title">
+                IQIYI 📺
+              </h5>
+
+              <p class="text-muted small">
+                Menonton drama China adalah salah satu
+                hiburan favoritku.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="hobby-card h-100">
+
+            <div class="card-img-wrapper">
+
+              <img
+                src="img/rmen.jpeg"
+                class="card-img-top"
+                alt="Niku Udon"
+              />
+
+              <div class="image-overlay">
+                <i class="bi bi-egg-fried"></i>
+              </div>
+
+            </div>
+
+            <div class="card-body text-center">
+
+              <h5 class="card-title">
+                Niku Udon 🍜
+              </h5>
+
+              <p class="text-muted small">
+                Kulineran dan mencoba makanan enak
+                adalah salah satu hobiku.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="hobby-card h-100">
+
+            <div class="card-img-wrapper">
+
+              <img
+                src="img/pntai.jpeg"
+                class="card-img-top"
+                alt="Pantai"
+              />
+
+              <div class="image-overlay">
+                <i class="bi bi-water"></i>
+              </div>
+
+            </div>
+
+            <div class="card-body text-center">
+
+              <h5 class="card-title">
+                Pantai 🌊
+              </h5>
+
+              <p class="text-muted small">
+                Menikmati suasana pantai dan pemandangan
+                alam membuatku lebih rileks.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="hobby-card h-100">
+
+            <div class="card-img-wrapper">
+
+              <img
+                src="img/prbn.jpeg"
+                class="card-img-top"
+                alt="Pariban"
+              />
+
+              <div class="image-overlay">
+                <i class="bi bi-droplet-fill"></i>
+              </div>
+
+            </div>
+
+            <div class="card-body text-center">
+
+              <h5 class="card-title">
+                Pariban 💧
+              </h5>
+
+              <p class="text-muted small">
+                Jalan-jalan dan menikmati suasana
+                alam bersama teman.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+        <div class="col-md-6 col-lg-4">
+
+          <div class="hobby-card h-100">
+
+            <div class="card-img-wrapper">
+
+              <img
+                src="img/mns.jpeg"
+                class="card-img-top"
+                alt="Monas"
+              />
+
+              <div class="image-overlay">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+
+            </div>
+
+            <div class="card-body text-center">
+
+              <h5 class="card-title">
+                Monas ☁️
+              </h5>
+
+              <p class="text-muted small">
+                Mengunjungi tempat baru dan
+                mengabadikan momen perjalanan.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= KONTAK ================= -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <h2 class="section-title">
+          Kontak Saya 💌
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="text-muted">
+          Punya pesan untuk saya? Silakan kirim pesan di bawah ini 💗
+        </p>
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+          <div class="contact-box">
+
+            <form>
+
+              <!-- Nama -->
+              <div class="mb-3">
+
+                <label
+                  for="nama"
+                  class="form-label fw-semibold">
+
+                  <i class="bi bi-person-fill"></i>
+                  Nama Lengkap
+
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Masukkan nama Anda"
+                  required
+                />
+
+              </div>
+
+
+              <!-- Email -->
+              <div class="mb-3">
+
+                <label
+                  for="email"
+                  class="form-label fw-semibold">
+
+                  <i class="bi bi-envelope-fill"></i>
+                  Email
+
+                </label>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="nama@email.com"
+                  required
+                />
+
+              </div>
+
+
+              <!-- Pesan -->
+              <div class="mb-4">
+
+                <label
+                  for="pesan"
+                  class="form-label fw-semibold">
+
+                  <i class="bi bi-chat-heart-fill"></i>
+                  Pesan
+
+                </label>
+
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="5"
+                  placeholder="Tulis pesan Anda di sini..."
+                  required></textarea>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="btn btn-pink w-100">
+
+                <i class="bi bi-send-fill"></i>
+                Kirim Pesan 🩷
+
+              </button>
+
+            </form>
+
+
+            <!-- Social Media -->
+            <div class="social-icons">
+
+              <a href="#" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" title="TikTok">
+                <i class="bi bi-tiktok"></i>
+              </a>
+
+              <a href="#" title="Email">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+
+              <a href="#" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="text-center">
+
+    <p class="mb-1 fw-semibold">
+      Made with 💗 by Aira Zakia
+    </p>
+
+    <small>
+      © 2026 Aira Zakia | My Personal Portfolio ✨
+    </small>
+
+  </footer>
+
+
+  <!-- ================= BACK TO TOP ================= -->
+  <a
+    href="#home"
+    class="back-to-top"
+    title="Kembali ke atas">
+
+    <i class="bi bi-arrow-up"></i>
+
+  </a>
+
+
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- ================= CUSTOM JAVASCRIPT ================= -->
+  <script>
+
+    // Navbar aktif sesuai section
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          current = section.getAttribute("id");
+        }
+
+      });
+
+      navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+          link.getAttribute("href") === "#" + current
+        ) {
+          link.classList.add("active");
+        }
+
+      });
+
+    });
+
+
+    // Tutup navbar otomatis setelah menu diklik di HP
+    const navLinksAll = document.querySelectorAll(
+      ".navbar-nav .nav-link"
+    );
+
+    const navbarCollapse =
+      document.querySelector(".navbar-collapse");
+
+    navLinksAll.forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        if (navbarCollapse.classList.contains("show")) {
+
+          const bsCollapse =
+            bootstrap.Collapse.getInstance(navbarCollapse);
+
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
