@@ -4,40 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Aira Zakia | My Cute Portfolio 🎀</title>
+  <title>Aira Zakia | Stitch Cute Portfolio 💙</title>
 
   <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
 
     :root {
-      --pink: #ff6fae;
-      --pink-dark: #ec407a;
-      --pink-light: #fff0f6;
-      --purple: #b565d9;
-      --purple-light: #f1e4ff;
-      --blue: #69c9ff;
-      --blue-light: #eaf9ff;
-      --yellow: #ffd166;
-      --text: #39434d;
-      --white: #ffffff;
-      --shadow: 0 15px 40px rgba(255,111,174,.12);
+      --stitch-blue: #4bb9f5;
+      --stitch-dark: #1976b9;
+      --stitch-light: #e5f8ff;
+      --purple: #9b72cf;
+      --purple-light: #f1e7ff;
+      --pink: #ff82b2;
+      --pink-light: #fff0f7;
+      --yellow: #ffe27a;
+      --text: #334455;
+      --white: #fff;
+      --shadow: 0 15px 40px rgba(50,150,220,.15);
     }
 
     * {
@@ -53,13 +46,13 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: var(--text);
-      background: #fff8fb;
+      background: #f7fcff;
       overflow-x: hidden;
       transition: .4s;
     }
 
     ::selection {
-      background: var(--pink);
+      background: var(--stitch-blue);
       color: white;
     }
 
@@ -68,11 +61,14 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: #ffeaf3;
+      background: #e3f7ff;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(var(--pink), var(--purple));
+      background: linear-gradient(
+        var(--stitch-blue),
+        var(--purple)
+      );
       border-radius: 20px;
     }
 
@@ -85,12 +81,12 @@
       top: 0;
       left: 0;
       width: 0%;
-      height: 4px;
+      height: 5px;
       background: linear-gradient(
         90deg,
-        var(--pink),
+        var(--stitch-blue),
         var(--purple),
-        var(--blue)
+        var(--pink)
       );
       z-index: 99999;
     }
@@ -101,28 +97,28 @@
 
     body.dark {
       --text: #eeeeee;
-      background: #18151c;
-      color: #eeeeee;
+      background: #111b24;
+      color: #eee;
     }
 
     body.dark #about {
-      background: #1d1922;
+      background: #17232d;
     }
 
     body.dark #karya {
-      background: #211b26;
+      background: #14212b;
     }
 
     body.dark #contact {
       background: linear-gradient(
         135deg,
-        #241b24,
-        #18242a
+        #18252e,
+        #241c2d
       );
     }
 
     body.dark .navbar {
-      background: rgba(35,30,42,.88) !important;
+      background: rgba(20,32,42,.9) !important;
     }
 
     body.dark .nav-link {
@@ -134,7 +130,7 @@
     body.dark .hobby-card,
     body.dark .contact-box,
     body.dark .stat-box {
-      background: #28222e;
+      background: #202e39;
       color: #eee;
     }
 
@@ -153,8 +149,8 @@
     }
 
     body.dark .form-control {
-      background: #211c27;
-      border-color: #514353;
+      background: #18242d;
+      border-color: #40515e;
       color: white;
     }
 
@@ -178,12 +174,11 @@
       width: 92%;
       border-radius: 30px;
 
-      background: rgba(255,255,255,.78) !important;
+      background: rgba(255,255,255,.82) !important;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
 
-      box-shadow:
-        0 10px 30px rgba(255,111,174,.12);
+      box-shadow: 0 10px 30px rgba(40,160,220,.15);
 
       z-index: 1000;
       transition: .4s;
@@ -196,12 +191,13 @@
 
     .navbar-brand {
       font-family: 'Pacifico', cursive;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
 
       background: linear-gradient(
         45deg,
-        var(--pink),
-        var(--purple)
+        var(--stitch-blue),
+        var(--purple),
+        var(--pink)
       );
 
       -webkit-background-clip: text;
@@ -209,7 +205,7 @@
     }
 
     .nav-link {
-      color: #555 !important;
+      color: #53616d !important;
       font-weight: 600;
       margin: 3px;
       padding: 9px 15px !important;
@@ -223,12 +219,11 @@
 
       background: linear-gradient(
         135deg,
-        var(--pink),
+        var(--stitch-blue),
         var(--purple)
       );
 
-      box-shadow:
-        0 5px 15px rgba(255,111,174,.25);
+      box-shadow: 0 5px 15px rgba(60,170,230,.3);
     }
 
     .dark-toggle {
@@ -239,7 +234,7 @@
 
       background: linear-gradient(
         135deg,
-        var(--pink),
+        var(--stitch-blue),
         var(--purple)
       );
 
@@ -274,9 +269,9 @@
 
         linear-gradient(
           135deg,
-          #bdeaff,
-          #ffd2e4,
-          #e8d5ff
+          #9ee4ff,
+          #cdefff,
+          #e8d8ff
         );
 
       border-bottom-left-radius: 90px;
@@ -289,31 +284,30 @@
       filter: blur(2px);
       opacity: .5;
 
-      animation:
-        floating 6s ease-in-out infinite;
+      animation: floating 6s ease-in-out infinite;
     }
 
     .shape-1 {
-      width: 200px;
-      height: 200px;
-      background: #ff91bd;
-      left: -70px;
+      width: 220px;
+      height: 220px;
+      background: #62caff;
+      left: -80px;
       top: 20%;
     }
 
     .shape-2 {
-      width: 250px;
-      height: 250px;
-      background: #8bdcff;
+      width: 260px;
+      height: 260px;
+      background: #c5a2ff;
       right: -100px;
       bottom: -100px;
       animation-delay: 2s;
     }
 
     .shape-3 {
-      width: 100px;
-      height: 100px;
-      background: #d49aff;
+      width: 110px;
+      height: 110px;
+      background: #ff9ec5;
       right: 15%;
       top: 20%;
       animation-delay: 1s;
@@ -323,10 +317,7 @@
       position: absolute;
       color: white;
       font-size: 25px;
-
-      animation:
-        sparkle 2s infinite;
-
+      animation: sparkle 2s infinite;
       pointer-events: none;
     }
 
@@ -347,10 +338,6 @@
       animation-delay: .5s;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero-content {
       position: relative;
       z-index: 5;
@@ -364,19 +351,22 @@
 
       border-radius: 50px;
 
-      background: rgba(255,255,255,.65);
+      background: rgba(255,255,255,.7);
 
       backdrop-filter: blur(10px);
 
-      color: var(--pink-dark);
+      color: var(--stitch-dark);
 
       font-weight: 600;
 
-      box-shadow:
-        0 8px 25px rgba(0,0,0,.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
 
       animation: gentlePulse 3s infinite;
     }
+
+    /* =========================
+       STITCH PROFILE
+    ========================= */
 
     .profile-wrapper {
       position: relative;
@@ -392,20 +382,20 @@
 
       border-radius: 50%;
 
-      border: 2px dashed rgba(255,255,255,.9);
+      border: 3px dashed rgba(255,255,255,.9);
 
       animation: rotate 15s linear infinite;
     }
 
     .profile-wrapper::after {
-      content: "🎀";
+      content: "💙";
 
       position: absolute;
-      right: -8px;
+      right: -10px;
       bottom: 5px;
 
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
 
       display: flex;
       align-items: center;
@@ -415,11 +405,9 @@
 
       background: white;
 
-      box-shadow:
-        0 8px 20px rgba(0,0,0,.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,.1);
 
-      animation:
-        gentleFloat 3s ease-in-out infinite;
+      animation: gentleFloat 3s ease-in-out infinite;
     }
 
     .profile-img {
@@ -430,13 +418,12 @@
 
       border-radius: 50%;
 
-      border: 7px solid white;
+      border: 8px solid white;
 
       box-shadow:
-        0 20px 50px rgba(171,71,188,.25);
+        0 20px 50px rgba(25,118,185,.3);
 
-      animation:
-        profileFloat 4s ease-in-out infinite;
+      animation: profileFloat 4s ease-in-out infinite;
 
       transition: .4s;
 
@@ -456,9 +443,9 @@
       background:
         linear-gradient(
           45deg,
-          #ec407a,
-          #ab47bc,
-          #29b6f6
+          #1976b9,
+          #6d48a8,
+          #f05f98
         );
 
       -webkit-background-clip: text;
@@ -466,14 +453,14 @@
     }
 
     .typing {
-      color: #555;
+      color: #4d5d68;
       font-size: 1.2rem;
       font-weight: 600;
       min-height: 35px;
     }
 
     .cursor {
-      color: var(--pink);
+      color: var(--stitch-blue);
       animation: blink .7s infinite;
     }
 
@@ -481,7 +468,7 @@
        BUTTONS
     ========================= */
 
-    .btn-pink {
+    .btn-stitch {
       border: none;
       color: white;
 
@@ -494,17 +481,17 @@
       background:
         linear-gradient(
           135deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
       box-shadow:
-        0 10px 25px rgba(255,64,129,.25);
+        0 10px 25px rgba(50,160,220,.25);
 
       transition: .3s;
     }
 
-    .btn-pink:hover {
+    .btn-stitch:hover {
       color: white;
 
       transform:
@@ -512,13 +499,13 @@
         scale(1.03);
 
       box-shadow:
-        0 15px 30px rgba(255,64,129,.4);
+        0 15px 30px rgba(50,160,220,.4);
     }
 
-    .btn-outline-pink {
-      border: 2px solid var(--pink);
+    .btn-outline-stitch {
+      border: 2px solid var(--stitch-blue);
 
-      color: var(--pink);
+      color: var(--stitch-dark);
 
       font-weight: 600;
 
@@ -529,9 +516,9 @@
       transition: .3s;
     }
 
-    .btn-outline-pink:hover {
+    .btn-outline-stitch:hover {
       color: white;
-      background: var(--pink);
+      background: var(--stitch-blue);
 
       transform: translateY(-4px);
     }
@@ -549,7 +536,7 @@
 
       border-radius: 20px;
 
-      background: rgba(255,255,255,.45);
+      background: rgba(255,255,255,.5);
 
       backdrop-filter: blur(10px);
 
@@ -561,13 +548,13 @@
         translateY(-7px)
         rotate(1deg);
 
-      background: rgba(255,255,255,.75);
+      background: rgba(255,255,255,.8);
     }
 
     .stat-number {
       font-size: 1.8rem;
       font-weight: 800;
-      color: var(--pink-dark);
+      color: var(--stitch-dark);
     }
 
     .stat-text {
@@ -591,7 +578,7 @@
       background:
         linear-gradient(
           45deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
@@ -600,7 +587,7 @@
     }
 
     .section-line {
-      width: 70px;
+      width: 80px;
       height: 5px;
 
       margin: 15px auto 35px;
@@ -610,15 +597,11 @@
       background:
         linear-gradient(
           90deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple),
-          var(--blue)
+          var(--pink)
         );
     }
-
-    /* =========================
-       REVEAL
-    ========================= */
 
     .reveal {
       opacity: 0;
@@ -651,12 +634,14 @@
         linear-gradient(
           135deg,
           #ffffff,
-          #fff2f7
+          #eaf9ff
         );
 
       box-shadow: var(--shadow);
 
       transition: .4s;
+
+      border: 2px solid rgba(75,185,245,.12);
     }
 
     .about-box:hover {
@@ -664,7 +649,7 @@
 
       box-shadow:
         0 25px 50px
-        rgba(255,111,174,.18);
+        rgba(50,160,220,.18);
     }
 
     .about-icon {
@@ -687,13 +672,13 @@
       background:
         linear-gradient(
           135deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
       box-shadow:
         0 10px 25px
-        rgba(255,111,174,.3);
+        rgba(50,160,220,.3);
 
       animation:
         gentleFloat 3s ease-in-out infinite;
@@ -710,6 +695,8 @@
         0 8px 25px rgba(0,0,0,.05);
 
       transition: .3s;
+
+      border-bottom: 4px solid var(--stitch-blue);
     }
 
     .feature:hover {
@@ -730,8 +717,8 @@
       background:
         linear-gradient(
           180deg,
-          #fff8fb,
-          #effaff
+          #f7fcff,
+          #eef7ff
         );
     }
 
@@ -757,7 +744,7 @@
 
       box-shadow:
         0 25px 45px
-        rgba(255,111,174,.18);
+        rgba(50,160,220,.18);
     }
 
     .image-wrapper {
@@ -791,7 +778,7 @@
         linear-gradient(
           90deg,
           transparent,
-          rgba(255,255,255,.5),
+          rgba(255,255,255,.6),
           transparent
         );
 
@@ -812,8 +799,8 @@
 
       background:
         linear-gradient(
-          rgba(255,111,174,.15),
-          rgba(171,71,188,.45)
+          rgba(75,185,245,.15),
+          rgba(120,75,170,.45)
         );
 
       opacity: 0;
@@ -850,7 +837,7 @@
       justify-content: center;
 
       background:
-        rgba(20,10,25,.85);
+        rgba(10,30,45,.85);
 
       backdrop-filter: blur(10px);
 
@@ -901,7 +888,7 @@
 
       color: white;
 
-      background: var(--pink);
+      background: var(--stitch-blue);
 
       font-size: 1.5rem;
     }
@@ -914,8 +901,8 @@
       background:
         linear-gradient(
           135deg,
-          #fff0f5,
-          #e9faff
+          #e8f8ff,
+          #f4edff
         );
     }
 
@@ -925,7 +912,7 @@
       border-radius: 30px;
 
       background:
-        rgba(255,255,255,.75);
+        rgba(255,255,255,.8);
 
       backdrop-filter: blur(20px);
 
@@ -934,7 +921,7 @@
     }
 
     .form-control {
-      border: 2px solid #f7d5e3;
+      border: 2px solid #cdeefa;
 
       border-radius: 15px;
 
@@ -944,11 +931,11 @@
     }
 
     .form-control:focus {
-      border-color: var(--pink);
+      border-color: var(--stitch-blue);
 
       box-shadow:
         0 0 20px
-        rgba(255,111,174,.15);
+        rgba(75,185,245,.18);
     }
 
     /* =========================
@@ -985,7 +972,7 @@
       background:
         linear-gradient(
           135deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
@@ -1000,7 +987,7 @@
 
       box-shadow:
         0 10px 25px
-        rgba(255,111,174,.35);
+        rgba(75,185,245,.35);
     }
 
     /* =========================
@@ -1015,8 +1002,9 @@
       background:
         linear-gradient(
           135deg,
-          #69c9ff,
-          #f48fb1
+          #1976b9,
+          #7352a8,
+          #ed78a9
         );
     }
 
@@ -1041,7 +1029,7 @@
       background:
         linear-gradient(
           135deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
@@ -1081,7 +1069,7 @@
         translate(-50%, 100px);
 
       background:
-        rgba(255,255,255,.95);
+        rgba(255,255,255,.97);
 
       color: var(--text);
 
@@ -1111,12 +1099,12 @@
     }
 
     body.dark .cute-toast {
-      background: #29222f;
+      background: #202e39;
       color: white;
     }
 
     /* =========================
-       FLOATING HEARTS
+       FLOATING STITCH ELEMENTS
     ========================= */
 
     .floating-heart {
@@ -1124,7 +1112,7 @@
 
       bottom: -50px;
 
-      color: var(--pink);
+      color: var(--stitch-blue);
 
       pointer-events: none;
 
@@ -1134,16 +1122,12 @@
         heartFloat 5s linear forwards;
     }
 
-    /* =========================
-       CLICK HEART
-    ========================= */
-
     .click-heart {
       position: fixed;
 
       pointer-events: none;
 
-      color: var(--pink);
+      color: var(--stitch-blue);
 
       font-size: 25px;
 
@@ -1168,7 +1152,7 @@
       padding: 20px;
 
       background:
-        rgba(30,15,30,.75);
+        rgba(10,30,45,.75);
 
       backdrop-filter: blur(10px);
 
@@ -1201,7 +1185,7 @@
         linear-gradient(
           135deg,
           #fff,
-          #fff0f7
+          #e8f8ff
         );
 
       box-shadow:
@@ -1235,7 +1219,7 @@
       background:
         linear-gradient(
           45deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
 
@@ -1244,7 +1228,7 @@
     }
 
     .love-card p {
-      color: #777;
+      color: #667;
       line-height: 1.8;
     }
 
@@ -1253,7 +1237,7 @@
 
       font-family: 'Pacifico', cursive;
 
-      color: var(--pink);
+      color: var(--stitch-dark);
     }
 
     .love-close {
@@ -1273,13 +1257,13 @@
       background:
         linear-gradient(
           135deg,
-          var(--pink),
+          var(--stitch-blue),
           var(--purple)
         );
     }
 
     body.dark .love-card {
-      background: #29222f;
+      background: #202e39;
     }
 
     body.dark .love-card p {
@@ -1309,13 +1293,13 @@
       background:
         linear-gradient(
           135deg,
-          #ff6fae,
-          #b565d9
+          var(--stitch-blue),
+          var(--purple)
         );
 
       box-shadow:
         0 10px 25px
-        rgba(255,111,174,.25);
+        rgba(50,160,220,.25);
 
       z-index: 998;
 
@@ -1366,7 +1350,7 @@
     }
 
     body.dark .surprise-box {
-      background: #29222f;
+      background: #202e39;
       color: white;
     }
 
@@ -1376,9 +1360,7 @@
 
     .confetti {
       position: fixed;
-
       pointer-events: none;
-
       z-index: 30000;
     }
 
@@ -1421,18 +1403,12 @@
     @keyframes sparkle {
       0%,100% {
         opacity: .2;
-
-        transform:
-          scale(.8)
-          rotate(0deg);
+        transform: scale(.8) rotate(0deg);
       }
 
       50% {
         opacity: 1;
-
-        transform:
-          scale(1.2)
-          rotate(20deg);
+        transform: scale(1.2) rotate(20deg);
       }
     }
 
@@ -1499,22 +1475,6 @@
           scale(1.4);
 
         opacity: 0;
-      }
-    }
-
-    @keyframes cursorSparkle {
-      0% {
-        opacity: 1;
-        transform: scale(.5);
-      }
-
-      100% {
-        opacity: 0;
-
-        transform:
-          translateY(-25px)
-          scale(1.5)
-          rotate(180deg);
       }
     }
 
@@ -1598,9 +1558,7 @@
       .surprise-button {
         left: 15px;
         bottom: 15px;
-
         padding: 10px 14px;
-
         font-size: .8rem;
       }
 
@@ -1615,17 +1573,14 @@
 
 <body>
 
-  <!-- SCROLL PROGRESS -->
   <div id="scrollProgress"></div>
-
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
-
     <div class="container">
 
       <a class="navbar-brand" href="#home">
-        Aira Zakia 🎀
+        Aira Zakia 💙
       </a>
 
       <button
@@ -1638,9 +1593,7 @@
 
       </button>
 
-      <div
-        class="collapse navbar-collapse"
-        id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav ms-auto align-items-lg-center">
 
@@ -1688,7 +1641,6 @@
       </div>
 
     </div>
-
   </nav>
 
 
@@ -1701,12 +1653,12 @@
 
     <div class="sparkle s1">✦</div>
     <div class="sparkle s2">✧</div>
-    <div class="sparkle s3">✦</div>
+    <div class="sparkle s3">⭐</div>
 
     <div class="container text-center hero-content">
 
       <span class="welcome" id="greeting">
-        ✨ Welcome to My Portfolio ✨
+        💙 Welcome to Aira's Stitch World 🌺
       </span>
 
       <div class="profile-wrapper">
@@ -1731,15 +1683,15 @@
       </div>
 
       <p class="text-secondary">
-        Welcome to my little world full of
-        dreams, stories & happy moments 💕
+        Welcome to my little blue world full of
+        dreams, adventures & happiness 💙🌺
       </p>
 
       <div class="mt-4">
 
         <a
           href="#about"
-          class="btn btn-pink me-2">
+          class="btn btn-stitch me-2">
 
           Tentang Saya
           <i class="bi bi-heart-fill"></i>
@@ -1748,7 +1700,7 @@
 
         <a
           href="#karya"
-          class="btn btn-outline-pink">
+          class="btn btn-outline-stitch">
 
           Lihat Karya
           <i class="bi bi-stars"></i>
@@ -1757,11 +1709,10 @@
 
       </div>
 
-      <!-- FITUR BARU -->
       <div class="mt-3">
 
         <button
-          class="btn btn-outline-pink me-2"
+          class="btn btn-outline-stitch me-2"
           id="loveButton">
 
           💌 Love Letter
@@ -1769,7 +1720,7 @@
         </button>
 
         <button
-          class="btn btn-pink"
+          class="btn btn-stitch"
           id="moodButton">
 
           🌈 Check My Mood
@@ -1777,7 +1728,6 @@
         </button>
 
       </div>
-
 
       <div class="row justify-content-center stats">
 
@@ -1790,8 +1740,8 @@
 
         <div class="col-4 col-md-2">
           <div class="stat-box">
-            <div class="stat-number">♡</div>
-            <div class="stat-text">Passion</div>
+            <div class="stat-number">💙</div>
+            <div class="stat-text">Stitch Love</div>
           </div>
         </div>
 
@@ -1805,7 +1755,6 @@
       </div>
 
     </div>
-
   </section>
 
 
@@ -1817,13 +1766,13 @@
       <div class="text-center mb-5 reveal">
 
         <h2 class="section-title">
-          Tentang Saya 🩰
+          Tentang Saya 💙
         </h2>
 
         <div class="section-line"></div>
 
         <p class="text-muted">
-          Sedikit cerita tentang saya 💗
+          Sedikit cerita tentang Aira 🌺
         </p>
 
       </div>
@@ -1835,11 +1784,11 @@
           <div class="about-box text-center reveal">
 
             <div class="about-icon mb-4">
-              <i class="bi bi-person-heart"></i>
+              🐾
             </div>
 
             <h4 class="fw-bold mb-3">
-              Hai, aku Kia! 💕
+              Hai, aku Kia! 💙
             </h4>
 
             <p class="text-muted">
@@ -1853,10 +1802,12 @@
             </p>
 
             <p class="text-muted mb-0">
-              Saya juga suka menonton drama China,
+              Saya suka menonton drama China,
               kulineran, jalan-jalan, dan
               mengeksplor tempat-tempat baru.
-              🌷✨
+              Selain itu, saya juga menyukai
+              karakter Stitch karena lucu,
+              unik, dan menggemaskan. 💙🌺
             </p>
 
           </div>
@@ -1871,10 +1822,10 @@
 
           <div class="feature text-center reveal">
 
-            <i class="bi bi-palette-fill text-danger"></i>
+            <i class="bi bi-palette-fill text-primary"></i>
 
             <h5 class="fw-bold mt-3">
-              Creative
+              Creative 🎨
             </h5>
 
             <p class="text-muted small mb-0">
@@ -1890,10 +1841,10 @@
 
           <div class="feature text-center reveal">
 
-            <i class="bi bi-camera-fill text-primary"></i>
+            <i class="bi bi-camera-fill text-info"></i>
 
             <h5 class="fw-bold mt-3">
-              Explorer
+              Explorer 🌺
             </h5>
 
             <p class="text-muted small mb-0">
@@ -1912,12 +1863,12 @@
             <i class="bi bi-stars text-warning"></i>
 
             <h5 class="fw-bold mt-3">
-              Cheerful
+              Stitch Lover 💙
             </h5>
 
             <p class="text-muted small mb-0">
-              Senang mencoba pengalaman
-              baru dan menikmati hidup.
+              Suka hal-hal cute, biru,
+              dan penuh keceriaan.
             </p>
 
           </div>
@@ -1939,19 +1890,18 @@
       <div class="text-center mb-5 reveal">
 
         <h2 class="section-title">
-          Karya & Hobiku 🌷
+          Karya & Hobiku 🌺
         </h2>
 
         <div class="section-line"></div>
 
         <p class="text-muted">
-          Hal-hal kecil yang membuatku bahagia 💕
+          My little Stitch-inspired world 💙
         </p>
 
       </div>
 
       <div class="row g-4 justify-content-center">
-
 
         <!-- CARD 1 -->
         <div class="col-md-6 col-lg-4">
@@ -1992,7 +1942,6 @@
 
         </div>
 
-
         <!-- CARD 2 -->
         <div class="col-md-6 col-lg-4">
 
@@ -2018,7 +1967,7 @@
             <div class="card-body text-center">
 
               <h5 class="card-title">
-                Niku Udon 🍜
+                Kulineran 🍜
               </h5>
 
               <p class="text-muted small">
@@ -2031,7 +1980,6 @@
           </div>
 
         </div>
-
 
         <!-- CARD 3 -->
         <div class="col-md-6 col-lg-4">
@@ -2072,7 +2020,6 @@
 
         </div>
 
-
         <!-- CARD 4 -->
         <div class="col-md-6 col-lg-4">
 
@@ -2098,7 +2045,7 @@
             <div class="card-body text-center">
 
               <h5 class="card-title">
-                Pariban 💧
+                Pariban 💦
               </h5>
 
               <p class="text-muted small">
@@ -2111,7 +2058,6 @@
           </div>
 
         </div>
-
 
         <!-- CARD 5 -->
         <div class="col-md-6 col-lg-4">
@@ -2138,7 +2084,7 @@
             <div class="card-body text-center">
 
               <h5 class="card-title">
-                Monas ☁️
+                Traveling ✈️
               </h5>
 
               <p class="text-muted small">
@@ -2173,7 +2119,7 @@
         <div class="section-line"></div>
 
         <p class="text-muted">
-          Yuk, kirim pesan kepadaku! 💗
+          Let's be friends! 💙🌺
         </p>
 
       </div>
@@ -2234,10 +2180,10 @@
 
               <button
                 type="submit"
-                class="btn btn-pink w-100">
+                class="btn btn-stitch w-100">
 
                 <i class="bi bi-send-fill"></i>
-                Kirim Pesan 💌
+                Kirim Pesan 💙
 
               </button>
 
@@ -2278,28 +2224,28 @@
   <footer class="text-center">
 
     <h5 class="fw-bold">
-      Aira Zakia 🎀
+      Aira Zakia 💙
     </h5>
 
     <p class="mb-2">
-      C-Drama Lover 🌸 | Walk & Eat 🍡
+      Stitch Lover 🌺 | C-Drama Lover 📺 | Food Explorer 🍜
     </p>
 
     <small>
-      Made with 💗 by Aira Zakia
+      Made with 💙 by Aira Zakia
       <br>
-      © 2026 My Personal Portfolio
+      © 2026 Stitch Cute Portfolio
     </small>
 
   </footer>
 
 
-  <!-- SURPRISE BUTTON -->
+  <!-- SURPRISE -->
   <button
     id="surpriseButton"
     class="surprise-button">
 
-    🎁 Surprise Me!
+    🐾 Surprise Me!
 
   </button>
 
@@ -2349,22 +2295,23 @@
       </button>
 
       <div class="love-icon">
-        💌
+        💙🐾
       </div>
 
       <h3>
-        Surat Kecil Untuk Kamu 🎀
+        Aloha! 💙🌺
       </h3>
 
       <p>
         Terima kasih sudah mampir ke dunia
-        kecil Aira! Semoga hari kamu selalu
-        dipenuhi hal-hal manis, senyum,
-        dan momen yang menyenangkan. 💗✨
+        kecil Aira! Semoga hari kamu dipenuhi
+        kebahagiaan, senyuman, petualangan,
+        dan banyak hal manis seperti suasana
+        pulau Hawaii. 🌺✨
       </p>
 
       <div class="love-sign">
-        With love, Aira 🌷
+        With love, Aira 💙
       </div>
 
     </div>
@@ -2377,7 +2324,7 @@
     id="surpriseBox"
     class="surprise-box">
 
-    ✨ Surprise! ✨
+    ✨ Aloha! ✨
 
   </div>
 
@@ -2387,29 +2334,28 @@
     class="cute-toast"
     id="cuteToast">
 
-    💗 Pesan kamu berhasil dikirim! ✨
+    💙 Pesan kamu berhasil dikirim! 🌺
 
   </div>
 
 
   <!-- BOOTSTRAP -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
   <script>
 
-    /* ==========================================
-       TYPING EFFECT
-    ========================================== */
+    /* =========================
+       TYPING
+    ========================= */
 
     const texts = [
+      "Stitch Lover 💙",
       "C-Drama Lover 🌸",
       "Food Explorer 🍜",
-      "Travel Enthusiast 🌷",
+      "Travel Enthusiast 🌺",
       "Dreamer ✨",
-      "Cute Soul 🎀"
+      "Cute Soul 🐾"
     ];
 
     let textIndex = 0;
@@ -2435,10 +2381,7 @@
 
           deleting = true;
 
-          setTimeout(
-            typingEffect,
-            1500
-          );
+          setTimeout(typingEffect, 1500);
 
           return;
         }
@@ -2456,9 +2399,7 @@
 
           textIndex =
             (textIndex + 1) % texts.length;
-
         }
-
       }
 
       setTimeout(
@@ -2470,9 +2411,9 @@
     typingEffect();
 
 
-    /* ==========================================
+    /* =========================
        GREETING
-    ========================================== */
+    ========================= */
 
     const greeting =
       document.getElementById("greeting");
@@ -2483,46 +2424,40 @@
     if (hour >= 5 && hour < 12) {
 
       greeting.textContent =
-        "🌷 Good Morning! Welcome to Aira's World ✨";
+        "🌺 Good Morning! Aloha from Aira 💙";
 
     } else if (hour >= 12 && hour < 18) {
 
       greeting.textContent =
-        "☀️ Good Afternoon! Welcome to Aira's World 💗";
+        "☀️ Good Afternoon! Aloha from Aira 💙";
 
     } else {
 
       greeting.textContent =
-        "🌙 Good Evening! Welcome to Aira's World 🎀";
-
+        "🌙 Good Evening! Aloha from Aira 💙";
     }
 
 
-    /* ==========================================
-       NAVBAR SCROLL
-    ========================================== */
+    /* =========================
+       NAVBAR
+    ========================= */
 
     const navbar =
       document.querySelector(".navbar");
 
     window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 50) {
-
-        navbar.classList.add("scrolled");
-
-      } else {
-
-        navbar.classList.remove("scrolled");
-
-      }
+      navbar.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+      );
 
     });
 
 
-    /* ==========================================
+    /* =========================
        ACTIVE NAV
-    ========================================== */
+    ========================= */
 
     const sections =
       document.querySelectorAll("section");
@@ -2548,7 +2483,6 @@
         ) {
 
           current = section.id;
-
         }
 
       });
@@ -2563,7 +2497,6 @@
         ) {
 
           link.classList.add("active");
-
         }
 
       });
@@ -2571,9 +2504,9 @@
     });
 
 
-    /* ==========================================
+    /* =========================
        SCROLL PROGRESS
-    ========================================== */
+    ========================= */
 
     const progress =
       document.getElementById("scrollProgress");
@@ -2594,28 +2527,22 @@
 
       progress.style.width =
         percentage + "%";
-
     });
 
 
-    /* ==========================================
+    /* =========================
        BACK TO TOP
-    ========================================== */
+    ========================= */
 
     const topButton =
       document.getElementById("topButton");
 
     window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 400) {
-
-        topButton.classList.add("show");
-
-      } else {
-
-        topButton.classList.remove("show");
-
-      }
+      topButton.classList.toggle(
+        "show",
+        window.scrollY > 400
+      );
 
     });
 
@@ -2629,9 +2556,9 @@
     });
 
 
-    /* ==========================================
+    /* =========================
        DARK MODE
-    ========================================== */
+    ========================= */
 
     const darkToggle =
       document.getElementById("darkToggle");
@@ -2655,7 +2582,6 @@
 
     });
 
-
     if (
       localStorage.getItem("airaDarkMode")
       === "true"
@@ -2665,13 +2591,12 @@
 
       darkToggle.innerHTML =
         '<i class="bi bi-sun-fill"></i>';
-
     }
 
 
-    /* ==========================================
+    /* =========================
        SCROLL REVEAL
-    ========================================== */
+    ========================= */
 
     const revealElements =
       document.querySelectorAll(".reveal");
@@ -2685,7 +2610,6 @@
             if (entry.isIntersecting) {
 
               entry.target.classList.add("show");
-
             }
 
           });
@@ -2703,9 +2627,9 @@
     });
 
 
-    /* ==========================================
-       FLOATING HEARTS
-    ========================================== */
+    /* =========================
+       FLOATING STITCH EMOJIS
+    ========================= */
 
     function createHeart() {
 
@@ -2715,20 +2639,20 @@
       heart.className =
         "floating-heart";
 
-      const hearts = [
-        "💗",
-        "💕",
-        "💖",
-        "💓",
-        "🌸",
+      const items = [
+        "💙",
+        "🐾",
+        "🌺",
         "✨",
-        "🎀"
+        "⭐",
+        "💜",
+        "🩵"
       ];
 
       heart.textContent =
-        hearts[
+        items[
           Math.floor(
-            Math.random() * hearts.length
+            Math.random() * items.length
           )
         ];
 
@@ -2747,7 +2671,6 @@
         () => heart.remove(),
         8000
       );
-
     }
 
     setInterval(
@@ -2756,62 +2679,9 @@
     );
 
 
-    /* ==========================================
-       CURSOR SPARKLE
-    ========================================== */
-
-    let sparkleCounter = 0;
-
-    document.addEventListener("mousemove", event => {
-
-      sparkleCounter++;
-
-      if (sparkleCounter % 5 !== 0) {
-        return;
-      }
-
-      const sparkle =
-        document.createElement("div");
-
-      sparkle.className =
-        "cursor-sparkle";
-
-      sparkle.textContent =
-        Math.random() > .5
-          ? "✦"
-          : "✧";
-
-      sparkle.style.position =
-        "fixed";
-
-      sparkle.style.left =
-        event.clientX + "px";
-
-      sparkle.style.top =
-        event.clientY + "px";
-
-      sparkle.style.pointerEvents =
-        "none";
-
-      sparkle.style.zIndex =
-        "99999";
-
-      sparkle.style.color =
-        "var(--pink)";
-
-      document.body.appendChild(sparkle);
-
-      setTimeout(
-        () => sparkle.remove(),
-        800
-      );
-
-    });
-
-
-    /* ==========================================
+    /* =========================
        LIGHTBOX
-    ========================================== */
+    ========================= */
 
     const lightbox =
       document.getElementById("lightbox");
@@ -2828,11 +2698,8 @@
 
         card.addEventListener("click", () => {
 
-          const image =
-            card.dataset.image;
-
           lightboxImage.src =
-            image;
+            card.dataset.image;
 
           lightbox.classList.add("show");
 
@@ -2851,26 +2718,14 @@
       if (event.target === lightbox) {
 
         lightbox.classList.remove("show");
-
-      }
-
-    });
-
-    document.addEventListener("keydown", event => {
-
-      if (event.key === "Escape") {
-
-        lightbox.classList.remove("show");
-        loveLetter.classList.remove("show");
-
       }
 
     });
 
 
-    /* ==========================================
+    /* =========================
        CONTACT FORM
-    ========================================== */
+    ========================= */
 
     const contactForm =
       document.getElementById("contactForm");
@@ -2891,8 +2746,8 @@
 
         cuteToast.textContent =
           name
-            ? `💗 Terima kasih, ${name}! Pesan kamu sudah diterima ✨`
-            : "💗 Pesan kamu sudah diterima! ✨";
+            ? `💙 Aloha ${name}! Pesan kamu sudah diterima 🌺`
+            : "💙 Pesan kamu sudah diterima! 🌺";
 
         cuteToast.classList.add("show");
 
@@ -2914,9 +2769,9 @@
     );
 
 
-    /* ==========================================
-       CLICK HEART
-    ========================================== */
+    /* =========================
+       CLICK EFFECT
+    ========================= */
 
     document.addEventListener("click", event => {
 
@@ -2936,8 +2791,8 @@
 
       heart.textContent =
         Math.random() > .5
-          ? "💗"
-          : "💖";
+          ? "💙"
+          : "🐾";
 
       heart.style.left =
         event.clientX + "px";
@@ -2965,75 +2820,9 @@
     });
 
 
-    /* ==========================================
-       DOUBLE CLICK HEART
-    ========================================== */
-
-    document
-      .querySelectorAll(
-        ".hobby-card, .profile-img"
-      )
-      .forEach(element => {
-
-        element.addEventListener(
-          "dblclick",
-          event => {
-
-            const heart =
-              document.createElement("div");
-
-            heart.textContent = "💗";
-
-            heart.style.position = "fixed";
-
-            heart.style.left =
-              event.clientX + "px";
-
-            heart.style.top =
-              event.clientY + "px";
-
-            heart.style.fontSize =
-              "80px";
-
-            heart.style.pointerEvents =
-              "none";
-
-            heart.style.zIndex =
-              "30000";
-
-            heart.style.transform =
-              "translate(-50%, -50%) scale(.5)";
-
-            heart.style.transition =
-              ".7s";
-
-            document.body.appendChild(heart);
-
-            requestAnimationFrame(() => {
-
-              heart.style.transform =
-                "translate(-50%, -50%) scale(1.5)";
-
-              heart.style.opacity = "0";
-
-            });
-
-            createConfetti();
-
-            setTimeout(
-              () => heart.remove(),
-              700
-            );
-
-          }
-        );
-
-      });
-
-
-    /* ==========================================
+    /* =========================
        LOVE LETTER
-    ========================================== */
+    ========================= */
 
     const loveButton =
       document.getElementById("loveButton");
@@ -3076,9 +2865,9 @@
     );
 
 
-    /* ==========================================
-       SURPRISE BUTTON
-    ========================================== */
+    /* =========================
+       SURPRISE
+    ========================= */
 
     const surpriseButton =
       document.getElementById(
@@ -3092,21 +2881,21 @@
 
     const surprises = [
 
-      "🌷 Kamu hari ini sudah melakukan yang terbaik!",
+      "🌺 Aloha! Semoga hari kamu penuh kebahagiaan!",
 
-      "💗 Jangan lupa tersenyum hari ini!",
+      "💙 Jangan lupa tersenyum hari ini!",
 
       "🍜 Saatnya makan makanan favorit!",
 
+      "🐾 Stitch mengirimkan virtual hug! 🤗",
+
       "✨ Kamu punya banyak hal indah di depanmu!",
 
-      "🎀 Stay cute, stay happy!",
-
-      "🌸 Semoga hari kamu se-manis bunga!",
+      "🌊 Semoga suatu hari bisa jalan-jalan ke tempat impian!",
 
       "💫 Dream big and keep going!",
 
-      "🐰 Sending you a virtual hug! 🤗"
+      "🌺 Stay cute, stay happy, stay blue!"
 
     ];
 
@@ -3146,15 +2935,15 @@
     );
 
 
-    /* ==========================================
-       MOOD BUTTON
-    ========================================== */
+    /* =========================
+       MOOD
+    ========================= */
 
     const moods = [
 
-      "🎀 Mood hari ini: Cute & Happy!",
+      "💙 Mood hari ini: Stitch Mode!",
 
-      "🌸 Mood hari ini: Soft Girl!",
+      "🌺 Mood hari ini: Tropical Aloha!",
 
       "🍜 Mood hari ini: Mau Kulineran!",
 
@@ -3164,7 +2953,7 @@
 
       "✨ Mood hari ini: Dream Big!",
 
-      "💗 Mood hari ini: Full of Love!"
+      "🐾 Mood hari ini: Cute & Playful!"
 
     ];
 
@@ -3199,17 +2988,17 @@
       });
 
 
-    /* ==========================================
+    /* =========================
        CONFETTI
-    ========================================== */
+    ========================= */
 
     function createConfetti() {
 
       const colors = [
-        "#ff6fae",
-        "#b565d9",
-        "#69c9ff",
-        "#ffd166",
+        "#4bb9f5",
+        "#9b72cf",
+        "#ff82b2",
+        "#ffe27a",
         "#ffffff"
       ];
 
@@ -3287,7 +3076,6 @@
         );
 
       }
-
     }
 
   </script>
